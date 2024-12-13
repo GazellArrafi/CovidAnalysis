@@ -4,7 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Load the processed data and GeoJSON
-@st.cache
+@st.cache_data
 def load_data():
     # Membaca data dari file filtered_data.csv
     try:
@@ -15,7 +15,7 @@ def load_data():
         print("File filtered_data.csv tidak ditemukan. Pastikan file tersebut ada di direktori yang benar.")
         return pd.DataFrame()  # Kembalikan DataFrame kosong jika file tidak ditemukan
 
-@st.cache
+@st.cache_data
 def load_geojson():
     # Load GeoJSON
     geojson_path = "indonesia.geojson" 
